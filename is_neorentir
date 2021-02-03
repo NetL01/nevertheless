@@ -1,0 +1,19 @@
+n = int(input())
+m = [n][n]
+flag = True
+for i in range(n):
+    x = list(map(int, input().split()))
+    m.append(x)
+
+for i in range(n):
+    if m[i][j] == 1:
+        flag = False
+
+for i in range(n):
+    for j in range(i, n):
+        if n[i][j] != n[j][i]:
+            flag = False
+if flag:
+    print('YES')
+else:
+    print('NO')
